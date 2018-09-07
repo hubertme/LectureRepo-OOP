@@ -14,18 +14,25 @@ public class Anak extends Induk{
 		System.out.format("Sifat induk: %s\nSifat anak: %s\n\n",myAnak.sifatInduk,myAnak.sifatAnak);
 	}
 
+	// @Override
+	protected void gantiSifatInduk(String sender){
+		//Inherit from superclass
+		super.gantiSifatInduk(sender);
+		
+		System.out.println("terganti!");
+	}
+
 	public static void main(String[] args) {
 		String sifatInduk = "Pemarah";
 		String sifatAnak = "Ramah";
 
 		myAnak.setSifatAnak(sifatAnak);
-		myAnak.setSifatInduk(sifatInduk);
 
 		System.out.format("Sifat induk: %s\nSifat anak: %s\n\n",myAnak.sifatInduk,myAnak.sifatAnak);
 
 		myAnak.gantiSifatAnakDanInduk("Baik", "Ramah");
 
-		myAnak.gantiSifatInduk("Jahat");
+		myAnak.gantiSifatInduk("Manis");
 		System.out.format("Sifat induk: %s\nSifat anak: %s\n\n",myAnak.sifatInduk,myAnak.sifatAnak);
 
 	}
