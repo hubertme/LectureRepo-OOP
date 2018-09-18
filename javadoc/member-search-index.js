@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"javadocAnak","l":"gantiSifatInduk(String)","url":"gantiSifatInduk(java.lang.String)"},{"p":"<Unnamed>","c":"javadocAnak","l":"javadocAnak()"},{"p":"<Unnamed>","c":"javadocAnak","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"javadocAnak","l":"setSifatAnak(String)","url":"setSifatAnak(java.lang.String)"}]
