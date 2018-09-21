@@ -76,7 +76,6 @@ class Television{
 		if (this.isTurnedOn){
 				if (this.volume==15){
 				System.out.println("Maximum volume reached!");
-				printVolume();
 				return;
 			}
 			this.volume+=1;
@@ -90,7 +89,6 @@ class Television{
 		if (this.isTurnedOn){
 			if (this.volume==1){
 				System.out.println("Minimum volume reached!");
-				printVolume();
 				return;
 			}
 			this.volume-=1;
