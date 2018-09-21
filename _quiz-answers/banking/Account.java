@@ -14,7 +14,7 @@ public class Account{
 	public boolean saveAmount(double value){
 		if (value>=minSave){
 			this.balance+=value;
-			System.out.format("Success! Your balance is now %.2f\n",balance);
+			System.out.format("Success saving to your account! Your balance is now %.2f\n",balance);
 			return true;
 		}
 		System.out.println("The minimum saving is 10!");
@@ -24,10 +24,15 @@ public class Account{
 	public boolean withdrawAmount(double value){
 		if (this.balance-value>=minBalance){
 			this.balance-=value;
-			System.out.format("Success! Your balance is now %.2f\n",balance);
+			System.out.format("Success withdrew your money! Your balance is now %.2f\n",balance);
 			return true;
 		}
-		System.out.println("You have reached minimum value by withdrawing this!");
+		System.out.println("You will have reached minimum value by withdrawing this!");
 		return false;
+	}
+
+	public void multiplier(double val){
+		balance*=val;
+		System.out.format("Success adding interest! Your balance is now %.2f\n",balance);
 	}
 }

@@ -6,4 +6,10 @@ public class Debit extends Account{
 		super(balance);
 		this.interestRate = interestRate;
 	}
+
+	public void addInterest(){
+		double interest = (1+0.01*interestRate);
+		multiplier(interest);
+		return;
+	}
 }

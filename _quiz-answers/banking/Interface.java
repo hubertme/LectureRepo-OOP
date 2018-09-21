@@ -3,7 +3,7 @@ class Interface{
 
 		Credit creditAccount = new Credit(2000.0, 900.0);
 		Credit holdingAccount = new Credit(3000.0, 2900);
-		Debit debitAccount = new Debit(1000.0, 5.0);
+		Debit debitAccount = new Debit(1000.0, 100);
 
 		System.out.println("Balance in each account:");
 		System.out.println(creditAccount.fetchBalance());
@@ -21,6 +21,7 @@ class Interface{
 
 		debitAccount.saveAmount(200);
 		debitAccount.withdrawAmount(500);
+		debitAccount.addInterest();
 		System.out.println();
 	}
 }
