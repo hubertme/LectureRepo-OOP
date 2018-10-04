@@ -18,6 +18,21 @@ public class Hajj extends Account{
 		this.setMinimumDeposit(50000);
 	}
 
+	@Override
+	public void withdraw(double value){
+		if ((value>0) && (fetchBalance()-value>=fetchMinimumBalance())){
+			if (value>0.1*fetchBalance()){
+				System.out.println("You will be charged 50,000 for this transaction!");
+				setBalance(fetchBalance()-50000);
+			}
+			setBalance(fetchBalance()-value);
+			System.out.println("Success withdrawing money! Your balance is now "+fetchBalance());
+		}
+		else{
+			System.out.println("Sorry, your balance is not enough!");
+		}
+	}
+
 	// TEST CASE FOR BUSINESS ACCOUNT
 	// public static void main(String[] args) {
 	// 	Haji acc = new Haji("Hubert",1922983,50000);
